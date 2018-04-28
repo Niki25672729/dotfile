@@ -316,15 +316,6 @@ inoremap <> <><++><LEFT><LEFT><LEFT><LEFT><LEFT>
 
 
 " ----------------------------------------- "
-"  Highlight cursor
-" ----------------------------------------- "
-highlight Comment    ctermfg=DarkCyan
-highlight SpecialKey ctermfg=Yellow
-highlight statement  ctermfg=142
-
-
-
-" ----------------------------------------- "
 "  Highlight cursor line
 " ----------------------------------------- "
 set cursorline
