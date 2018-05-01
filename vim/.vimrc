@@ -70,7 +70,7 @@ filetype plugin indent on    " required
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0															" don't need to ask whether to use .ycm_extra_conf.py
 set completeopt-=preview                                                                    " don't show the preview window
-set completeopt=longest,menuone           													" let complete menu to be like IDE
+set completeopt=longest,menu           													    " let complete menu to be like IDE
 " let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_path_to_python_interpreter = 'python'
@@ -84,7 +84,7 @@ let g:ycm_filetype_blacklist = {
 	\}																						" close ycm under some condition
 let g:ycm_key_list_stop_completion = ['`']                                                  " use ` to choose the current option
 " let g:ycm_key_list_select_completion = ['<C-n>', '<Down>', '<TAB>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', '<TAB>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>', '<S-TAB>']
 " set the direction key
 " inoremap <expr> <Down>      pumvisible() ? '<C-n>' : '<Down>'
 " inoremap <expr> <Up>        pumvisible() ? '<C-p>' : '<Up>'
@@ -134,7 +134,7 @@ map <F2> :TagbarToggle<CR>
 
 
 " ----------------------------------------- "
-"  Vim-Slime
+"  Slime
 " ----------------------------------------- "
 let g:slime_target = 'tmux'
 let g:slime_default_config = {"socket_name": "default", "target_pane": ":0.1"}
@@ -143,7 +143,7 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": ":0.1"}
 
 
 " ----------------------------------------- "
-"  Vim-Latex
+"  Latex
 " ----------------------------------------- "
 filetype plugin on                                          " invoke Latex-Suite when open a tex file
 filetype indent on
