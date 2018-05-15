@@ -97,9 +97,9 @@ alias grep='grep --color=auto'
 alias bbs='env LC_ALL=zh_TW.BIG5 bbs'
 alias vim='/usr/local/bin/vim'
 alias tm='tmux new-session -A -s $(~/dotfile/tmux/startMenu.py $(tmux ls 2>&1))'
-# alias tm='tmux new-session -A -s $(~/.config/tmux/startMenu.py)'
 alias irssi='env TERM=xterm-color irssi'
 alias ducks='du -ks * |sort -rn |head -20'
+alias pipUpgrade='pip freeze | sed -e "s/==/>=/g" > ~/requirement.txt ; pip install --upgrade -r ~/requirement.txt ; rm ~/requirement.txt'
 
 # Set environment variable
 export CLICOLOR="xterm-color"
@@ -107,6 +107,7 @@ export TERM=xterm-256color
 export LSCOLORS="exfxcxdxbxexexabagacad"
 export CLICOLOR LsCOLORS
 export PAGER='less -FRXi'
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 # Set the pyenv
 #export PYENV_ROOT=/usr/local/opt/pyenv  
