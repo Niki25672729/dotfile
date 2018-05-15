@@ -70,7 +70,7 @@ filetype plugin indent on    " required
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0															" don't need to ask whether to use .ycm_extra_conf.py
 set completeopt-=preview                                                                    " don't show the preview window
-set completeopt=longest,menu           													    " let complete menu to be like IDE
+set completeopt=longest,menu,menuone           												" let complete menu to be like IDE
 " let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_path_to_python_interpreter = 'python'
@@ -94,6 +94,7 @@ let g:ycm_key_list_stop_completion = ['`']                                      
 nnoremap ? :YcmCompleter GetDoc <CR>
 " use q to close all preview window
 nnoremap qq :pclose <CR>
+highlight YcmWarningSign ctermfg=1
 
 
 
@@ -108,13 +109,14 @@ map <F1> :NERDTreeTabsToggle <CR>						" use F1 to open the nerdtree
 
 
 " ----------------------------------------- "
-"  NERDCommender
+"  NERDCommenter
 " ----------------------------------------- "
 let g:NERDSpaceDelims = 1				" Add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1			" Use compact syntax for prettified multi-line comments
-let g:NERDDefaultAlign = 'start'			" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'start'		" Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDCommentEmptyLines = 1			" Allow commenting and inverting empty lines (useful when commenting a region)
-map <C-\> <leader>ci					" Use CONTROL+\ to commend
+" Use CONTROL+\ to comment or uncomment, decided by top line
+map <C-\> <leader>c<SPACE>
 
 
 
@@ -191,9 +193,10 @@ autocmd BufWritePre *.tex call LastChange()
 " ----------------------------------------- "
 "  UltiSnips
 " ----------------------------------------- "
-let g:UltiSnipsExpandTrigger="<C-e>"
+let g:UltiSnipsExpandTrigger="µ"
 let g:UltiSnipsJumpForwardTrigger="∆"
 let g:UltiSnipsJumpBackwardTrigger="˚"
+let g:UltiSnipsListSnippets="˙"
 
 
 
@@ -345,8 +348,8 @@ highlight StatusLineNc ctermbg=234
 " ----------------------------------------- "
 "  NERDTree color
 " ----------------------------------------- "
-highlight NERDTreeDir ctermfg=Blue
+highlight NERDTreeDir ctermfg=DarkBlue
 highlight NERDTreeDirSlash ctermfg=DarkMagenta
 highlight NERDTreeOpenable ctermfg=Cyan
 highlight NERDTreeClosable ctermfg=DarkCyan
-highlight NERDTreeExecFile ctermfg=Red
+highlight NERDTreeExecFile ctermfg=DarkRed
